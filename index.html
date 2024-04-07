@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c6ba0f114d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id ="header">
+     <div class = "container">
+        <nav>
+            <img src="Ishani.png" class="logo">
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">My Aim</a></li>                
+                <li> <a href="#">Profficiency</a></li>
+                <li> <a href="#">Project Works</a></li>
+                <li> <a href="#">Achiements</a></li>
+                <li> <a href="#">Contact me</a></li>
+                
+            </ul>
+        </nav>
+     <div class="header-text">
+        <p>Student</p>
+        <h1>Hi, I'm <span>Ishani</span><br> Bhowmick.</h1>
+
+     </div>
+</div>    
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class = "about-col-1">
+                <img src="photo1.jpg">
+            </div>
+            
+            <div class = "about-col-2">
+                <h2 class="sub-title">About Me</h2><br>
+                <br><p1>I want to work with well reputed organizations where I can apply my acquired skills to contribute to the growth of the organization, and grow in parallel. I am a self motivated and hardworking individual with excellent research and communication skill, who is willing to be a software developer engineer in near future.</p1>    
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('school')">School</p>
+                    <p class="tab-links" onclick="opentab('college')">College</p>
+                </div>
+                <div class="tab-contents active-tab" id="school">
+                    <ul>
+                        <li><span>AISSE (2019)</span><br>SOUTH POINT HIGH SCHOOL<br>English, Bengali, Mathematics,Science, Social Science | 90.1%</li>
+                        <li><span>AISCE (2021)</span><br>SOUTH POINT HIGH SCHOOL<br>English, Chemistry, Physics,Mathematics, Biology | 88%</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="college">
+                    <ul>
+                        <li><span>B. Tech (2025) </span> <br>FUTURE INSTITUTE OF TECHNOLOGY<br> Computer Science and Engineering <br> (Internet of Things including Cybersecurity and Blockchain Technology)  <br>Average CGPA | 9.2 </li>                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!------------projects-->
+<div id="projects">
+    <div class="container">
+        <h2 class="sub-title">Projects</h2>
+        <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>P1</h2>
+                <p>desc</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>P2</h2>
+                <p>desc</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>P3</h2>
+                <p>desc</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------contact----------->
+<div id=""contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>8017065811</p>
+                <p>ishanibhowmick365@gmail.com</p>
+                <div class="social-icons">
+                    <a href="www.linkedin.com/in/ishani-bhowmick-04604b235"><i class="fa-brands fa-linkedin"></i></i></a>
+                    
+
+                </div>
+            </div>
+            <div class="contct-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder=""Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>    
+</body>
+</html>
